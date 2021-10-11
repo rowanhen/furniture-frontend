@@ -33,10 +33,7 @@ export const ListDesigns = (props) => {
 
     useEffect(() => {
         getDesigns()
-        setSelectedName()
     }, []);
-
-    const [selectedName, setSelectedName] = useState('something')
 
 
     //Finds all saved design names specific to the prop.productName

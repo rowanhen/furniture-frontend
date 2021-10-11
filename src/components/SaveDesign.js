@@ -24,7 +24,7 @@ export const SaveDesign = (props) => {
         e.preventDefault();
         try {
             const body = formattedData();
-            const response = await fetch("https://chair--app.herokuapp.com/submit", {
+            await fetch("https://chair--app.herokuapp.com/submit", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
