@@ -1,0 +1,174 @@
+.product__info__wrapper {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 5;
+}
+.product__title {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.product__subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.custom__designs__wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 400px;
+    width: 400px;
+    z-index: 5;
+    background-color: white;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.design__wrapper  {
+    display: flex;
+}
+.design__saved__subtitle {
+    position: relative;
+    left: 2vw;
+    top: 10px;
+    font-size: 1.3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.design__saved__map__wrapper {
+    position: relative;
+    top: 20px;
+    left: 2vw;
+}
+.design__name {
+    margin-bottom: 10px;
+    padding: 10px 10px 10px 0px;
+    width: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.design__load {
+    border: 1px solid black;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 30px;
+    width: 90px;
+}
+.design__delete {
+    position: relative;
+    left: 10px;
+    background: white;
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 30px;
+    width: 90px;
+}
+
+.controls-overlay {
+    width: 20vw;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid black;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    z-index: 5;
+}
+.chair {
+    position: relative;
+    left: 2vw;
+    height: 12vh;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.chair__area__hide {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    height: 100%;
+    border: 1px solid black;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.chair__area {
+    position: relative;
+    top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.chair__colour {
+    position: relative;
+    top: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.chair__toggle__rotate {
+    position: relative;
+    left: 2vw;
+    top: 20px;
+    border: 1px solid black;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: left;
+    height: 30px;
+    width: 100%;
+}
+
+.picker__swatch {
+    position: relative;
+    top: 25px;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.design__save__wrapper {
+    position: relative;
+    top: 40px;
+    left: 2vw;
+}
+.design__input__name {
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 80px;
+    width: 100%;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    box-shadow: none;
+}
+.design__save {
+    position: relative;
+    top: 20px;
+    border: 1px solid black;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: left;
+    height: 80px;
+    width: 100%;
+}
