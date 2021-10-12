@@ -2,13 +2,15 @@ import { SwatchesPicker } from './SwatchesPicker';
 import { ListDesigns } from './ListDesigns';
 import { SaveDesign } from './SaveDesign';
 import "../controls.css"
+import { useSnapshot} from 'valtio'
 
 export default function HTML(props){
+    const snap = useSnapshot(props.state)
     return(
         <>
             <ListDesigns productName={props.productName} state={props.state} />
             <div className="controls-overlay">
-                {Object.entries(props.state.items).map( (e, index) => {
+                {Object.entries(snap.items).map( (e, index) => {
                     return (
                     <div className="chair" key={index}>
                         <div className="chair__area">{e[0]}
