@@ -11,7 +11,7 @@ export const SaveDesign = (props) => {
         for( let i = 0; i < stateArray.length; i++ ) {
             dataFormatted[i] = {
             name: name.trim(),
-            item: props.state.product,
+            item: props.state.productName,
             chairPart: stateArray[i][0],
             colour: stateArray[i][1]
             }
@@ -30,7 +30,7 @@ export const SaveDesign = (props) => {
                 body: JSON.stringify(body)
             });
             setDesigns(designs)
-            window.location = `/${props.product}`;
+            window.location = `/${props.productName}`;
         } catch (err) {
             console.error(err.message)
         }

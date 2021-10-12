@@ -3,9 +3,7 @@ import { useGLTF, ContactShadows, OrbitControls, Environment } from '@react-thre
 import { Canvas } from "@react-three/fiber";
 import { proxy, useSnapshot} from 'valtio'
 import "../../controls.css"
-import { ListDesigns } from '../ListDesigns';
-import { SaveDesign } from '../SaveDesign';
-import { SwatchesPicker } from '../SwatchesPicker';
+import HTML from '../HTMLControls'
 
 const state = proxy({
     product: "Barcelona Chair",
@@ -73,31 +71,7 @@ function Model(props) {
 }
 useGLTF.preload('/scene.gltf')
 
-function HTML(props){
-    return(
-        <>
-        <ListDesigns productName={state.product} state={state} />
-        <div className="controls-overlay">
-            {Object.entries(state.items).map( (e, index) => {
-                return (
-                <div className="chair" key={index}>
-                    <div className="chair__area">{e[0]}
-                      <button className="chair__area__hide" onClick={() => props.setMesh[index](!(props.mesh[index]))}>hide mesh</button>
-                    </div>
-                    <div className="chair__colour">colour: {e[1]}</div>
-                    <SwatchesPicker className="picker"
-                      onChange={(color) => (state.items[e[0]] = color)}
-                      presetColors={(index >= 4) ? [ "#ffffff", "#cd9323", "#000000" ] : [ "#ffffff", "#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808", "#000000"]} 
-                    />
-                </div>
-                )
-            })}
-        <button className="chair__toggle__rotate" onClick={() => props.setRotate(!props.rotate)}>rotate: {`${props.rotate}`}</button>
-        <SaveDesign state={state} product={state.product} />
-        </div>
-        </>
-    )
-}
+
 
 export default function BarcelonaChairScene() {
     const [mesh0, setMesh0] = useState(true)
@@ -130,7 +104,14 @@ export default function BarcelonaChairScene() {
                 <meshStandardMaterial color="#0000ff" transparent depthWrite={false} />
                 </mesh> */}
             </Canvas>
-            <HTML setMesh={[setMesh0, setMesh1, setMesh2, setMesh3, setMesh4, setMesh5]} mesh={[mesh0, mesh1, mesh2, mesh3, mesh4, mesh5]} setRotate={setRotate} rotate={rotate} />
+            <HTML 
+                setMesh={[setMesh0, setMesh1, setMesh2, setMesh3, setMesh4, setMesh5]} 
+                mesh={[mesh0, mesh1, mesh2, mesh3, mesh4, mesh5]}
+                setRotate={setRotate} 
+                rotate={rotate}
+                productName={state.product} 
+                state={state}
+            />
          </>
     )
 }
