@@ -11,7 +11,7 @@ export const SaveDesign = (props) => {
         for( let i = 0; i < stateArray.length; i++ ) {
             dataFormatted[i] = {
             name: name.trim(),
-            item: props.state.productName,
+            item: props.productName,
             chairPart: stateArray[i][0],
             colour: stateArray[i][1]
             }

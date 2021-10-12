@@ -2,7 +2,6 @@ import React, { useRef, useState, Suspense } from 'react'
 import { useGLTF, ContactShadows, OrbitControls, Environment } from '@react-three/drei'
 import { Canvas } from "@react-three/fiber";
 import { proxy, useSnapshot} from 'valtio'
-import "../../controls.css"
 import HTML from '../HTMLControls'
 
 const state = proxy({

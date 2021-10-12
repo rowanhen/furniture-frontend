@@ -1,12 +1,12 @@
 import { SwatchesPicker } from './SwatchesPicker';
 import { ListDesigns } from './ListDesigns';
 import { SaveDesign } from './SaveDesign';
-
+import "../controls.css"
 
 export default function HTML(props){
     return(
         <>
-            <ListDesigns productName={props.state.product} state={props.state} />
+            <ListDesigns productName={props.productName} state={props.state} />
             <div className="controls-overlay">
                 {Object.entries(props.state.items).map( (e, index) => {
                     return (
@@ -23,7 +23,7 @@ export default function HTML(props){
                     )
                 })}
             <button className="chair__toggle__rotate" onClick={() => props.setRotate(!props.rotate)}>rotate: {`${props.rotate}`}</button>
-            <SaveDesign state={props.state} productName={props.state.product} />
+            <SaveDesign state={props.state} productName={props.productName} />
             </div>
         </>
     )
