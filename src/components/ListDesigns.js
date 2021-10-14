@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 export const ListDesigns = (props) => {
     const [ designs, setDesigns ] = useState([]);
     const [ designName, setDesignName ] = useState("Classic");
+    const [loadDesignsButton, setLoadDesignButton] = useState(false)
 
     //delete dunction 
     const deleteDesign = async (name) => {
@@ -81,8 +82,13 @@ export const ListDesigns = (props) => {
                     <div className="product__title">{props.productName}</div>
                     <div className="product__subtitle">Design: {designName}</div>
                 </div>
+                <button className="load__designs__button" onClick={() => setLoadDesignButton(!loadDesignsButton)}>Load Design</button>
+                {window.innerWidth < 1024 && loadDesignsButton === false ? 
+                null : 
                 <div className="custom__designs__wrapper">
-                    <div className="design__saved__subtitle">Saved Designs</div>
+                    <div className="design__saved__subtitle">Saved Designs 
+                        <button className="load__designs__button__close" onClick={() => setLoadDesignButton(false)}>Close</button>
+                    </div>
                     <div className="design__saved__map__wrapper">
                         {formattedDesignData.map((e, index) => 
                             <div className="design__wrapper" key={e.name}>
@@ -92,13 +98,14 @@ export const ListDesigns = (props) => {
                                     onClick={() =>{ 
                                         setDesignName(e.name)
                                         propertyChange(index)
+                                        setLoadDesignButton(false)
                                     }}
                                 >load</button>
                                 <button className="design__delete" onClick={() => deleteDesign(e.name)}>delete</button>
                             </div>
                         )}
                     </div>
-                </div>
+                </div>}
             </div>
         </>
     )

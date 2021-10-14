@@ -8,10 +8,10 @@ const state = proxy({
     product: "Barcelona Chair",
     current: null,
     items: {
-        chairUpper: "#000000",
-        chairLower: "#000000",
-        buttonsUpper: "#ffffff",
-        buttonsLower: "#ffffff",
+        chair_Upper: "#000000",
+        chair_Lower: "#000000",
+        buttons_Upper: "#ffffff",
+        buttons_Lower: "#ffffff",
         backing: "#ffffff",
         frame: "#ffffff",
     }
@@ -31,25 +31,25 @@ function Model(props) {
             <mesh className="mesh" 
             geometry={nodes.Plane001_0_6.geometry} 
             material={materials.chairUpper} 
-            material-color={snap.items.chairUpper} 
+            material-color={snap.items.chair_Upper} 
             scale={props.mesh[0] ? 1 : 0}
             />
             <mesh className="mesh" 
             geometry={nodes.Plane001_0_3.geometry} 
             material={materials.chairLower} 
-            material-color={snap.items.chairLower} 
+            material-color={snap.items.chair_Lower} 
             scale={props.mesh[1] ? 1 : 0}
             />
             <mesh className="mesh" 
             geometry={nodes.Plane001_0_5.geometry} 
             material={materials.buttonsUpper} 
-            material-color={snap.items.buttonsUpper} 
+            material-color={snap.items.buttons_Upper} 
             scale={props.mesh[2] ? 1 : 0}
             />
             <mesh className="mesh"
             geometry={nodes.Plane001_0_1.geometry} 
             material={materials.buttonsLower} 
-            material-color={snap.items.buttonsLower}
+            material-color={snap.items.buttons_Lower}
             scale={props.mesh[3] ? 1 : 0}
             />
             <mesh className="mesh" 

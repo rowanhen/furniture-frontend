@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 import { proxy, useSnapshot} from 'valtio'
 import HTML from '../HTMLControls'
 
-
 const state = proxy({
     product: "Earnes Chair",
     current: null,
@@ -44,17 +43,17 @@ function Model(props) {
           material={materials.backingLower}
           material-color={snap.items.backing_Lower}
         />
-        <mesh 
-          scale={props.mesh[2] ? 1 : 0}
-          geometry={nodes.RubberMid_low006_Eames_Chair_0_2.geometry}
-          material={materials.armLeather}
-          material-color={snap.items.arm_Leather}
-        />
         <mesh
-          scale={props.mesh[3] ? 1 : 0}
+          scale={props.mesh[2] ? 1 : 0}
           geometry={nodes.RubberMid_low006_Eames_Chair_0_5.geometry}
           material={materials.chairLeather}
           material-color={snap.items.chair_Leather}
+        />
+        <mesh 
+          scale={props.mesh[3] ? 1 : 0}
+          geometry={nodes.RubberMid_low006_Eames_Chair_0_2.geometry}
+          material={materials.armLeather}
+          material-color={snap.items.arm_Leather}
         />
         <mesh
           scale={props.mesh[4] ? 1 : 0}
